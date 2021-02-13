@@ -1,1 +1,1 @@
-Demo project 1
+Flask demo project 1
