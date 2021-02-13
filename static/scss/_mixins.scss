@@ -4,13 +4,13 @@
 	display: flex;
 }
 
-@mixin scale_image ($type : cover) {
+@mixin scale_image ($type: cover) {
 	width: 100%;
 	height: 100%;
 	object-fit: $type;
 }
 
-@mixin center ($axis : both) {
+@mixin center ($axis: both) {
 	@if $axis == 'X' {
 		position: absolute;
 		left: 50%;
@@ -35,19 +35,19 @@
 	transform: $transform;
 }
 
-@mixin fill ($axis : both) {
+@mixin fill ($axis: both, $type: absolute) {
 	@if $axis == 'X' {
-		position: absolute;
+		position: $type;
 		left: 0;
 		right: 0;
 
 	} @else if $axis == 'Y' {
-		position: absolute;
+		position: $type;
 		top: 0;
 		bottom: 0;
 		
 	} @else {
-		position: absolute;
+		position: $type;
 		top: 0;
 		left: 0;
 		right: 0;
