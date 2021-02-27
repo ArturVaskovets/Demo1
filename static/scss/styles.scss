@@ -127,7 +127,7 @@
 		.logo {
 			display: inline-block;
 			vertical-align: bottom;
-			width: 169px;
+			width: 110px;
 			height: auto;
 
 			img {
@@ -139,11 +139,11 @@
 
 .main_section {
 	height: 100vh;
-	background-image: url('../img/mountains.png');
-	background-position: center;
-	background-repeat: no-repeat;
-	background-size: cover;
-	background-attachment: fixed;
+	//background-image: url('../img/mountains.png');
+	//background-position: center;
+	//background-repeat: no-repeat;
+	//background-size: cover;
+	//background-attachment: fixed;
 	position: relative;
 
 	&::before {
@@ -152,14 +152,40 @@
 		bottom: 0;
 		height: 150px;
 		background: transparent linear-gradient(0deg, rgba($bg_light, 1) 0%, rgba($bg_light, 0.7) 50%, transparent 100%);
+		z-index: 4;
+	}
+
+	.gallery {
+		@include fill;
+		z-index: 2;
+
+		.image {
+			width: 100%;
+			height: 100%;
+
+			img {
+				@include scale_image;
+			}
+		}
+
+		.owl-stage-outer {
+			height: 100%;
+			.owl-stage {
+				height: 100%;
+				.owl-item {
+					height: 100%;
+				}
+			}
+		}
 	}
 
 	.caption {
 		@include center;
 		display: block;
 		width: 550px;
-		padding: 140px 20px;
-		background-color: rgba(#596e8a, 0.5);
+		padding: 50px 20px;
+		background-color: rgba(#596e8a, 0.7);
+		z-index: 3;
 
 		font-family: $font-1;
 		font-weight: 500;
@@ -326,7 +352,7 @@
 
 			a {
 				display: inline-block;
-				height: 125px;
+				height: 90px;
 
 				img {
 					width: auto;

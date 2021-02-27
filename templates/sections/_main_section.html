@@ -1,5 +1,29 @@
 <section class="main_section container_fluid" id="home">
+	<div class="gallery owl-carousel">
+		<div class="image">
+			<img src="{{ url_for('static', filename='img/city.png') }}" alt="City">
+		</div>
+		<div class="image">
+			<img src="{{ url_for('static', filename='img/paris.png') }}" alt="City">
+		</div>
+		<div class="image">
+			<img src="{{ url_for('static', filename='img/mountains.png') }}" alt="City">
+		</div>
+	</div>
 	<div class="caption">
 		Viaja a cualquier parte del mundo sin salir de tu salón
 	</div>
 </section>
+<script>
+	$(document).ready(function(){
+		$(".main_section .gallery.owl-carousel").owlCarousel({
+			loop:true,
+			nav:false,
+			dots: false,
+			items: 1,
+			autoplay: true,
+			autoplayTimeout: 5000,
+			smartSpeed: 1000
+		})
+	});
+</script>
