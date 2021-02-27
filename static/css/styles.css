@@ -1,7 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap");
 body {
-  font-family: "Montserrat", sans-serif;
+  font-family: "Lato", sans-serif;
   margin: 0;
   padding: 0;
 }
@@ -31,7 +31,7 @@ a {
   left: 0;
   right: 0;
   z-index: 1000;
-  padding-top: 50px;
+  padding-top: 25px;
   color: white;
 }
 .header::before {
@@ -72,13 +72,14 @@ a {
 .header .left_header .icons_wrapper {
   display: inline-block;
   vertical-align: middle;
+  height: 35px;
   margin-right: 5px;
 }
 .header .left_header .icons_wrapper .icon {
   position: relative;
   display: inline-block;
-  width: 30px;
-  height: 30px;
+  width: 35px;
+  height: 35px;
   background-color: white;
   border-radius: 50%;
   color: rgba(0, 0, 0, 0.5);
@@ -106,7 +107,7 @@ a {
   font-weight: 400;
   font-size: 18px;
   letter-spacing: 0.5px;
-  line-height: 1;
+  line-height: 35px;
 }
 .header .right_header .menu {
   display: inline-block;
@@ -117,7 +118,7 @@ a {
   font-weight: 400;
   font-size: 20px;
   letter-spacing: 0px;
-  line-height: 1;
+  line-height: 35px;
 }
 .header .right_header .menu .menu_item + .menu_item {
   margin-left: 10px;
@@ -125,7 +126,7 @@ a {
 .header .right_header .logo {
   display: inline-block;
   vertical-align: bottom;
-  width: 100px;
+  width: 169px;
   height: auto;
 }
 .header .right_header .logo img {
@@ -151,13 +152,14 @@ a {
   -ms-transform: translate(-50%, -50%);
   transform: translate(-50%, -50%);
   display: block;
-  padding: 90px 35px;
+  width: 550px;
+  padding: 140px 20px;
   background-color: rgba(89, 110, 138, 0.5);
-  font-family: "Raleway", sans-serif;
+  font-family: "Lato", sans-serif;
   font-weight: 500;
-  font-size: 70px;
+  font-size: 48px;
   letter-spacing: 0px;
-  line-height: 85px;
+  line-height: 55px;
   text-align: center;
   color: white;
   text-transform: uppercase;

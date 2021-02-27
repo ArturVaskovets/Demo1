@@ -1,0 +1,46 @@
+<header class="header container_fluid">
+	<div class="container">
+		<div class="left_header">
+			<div class="phone">
+				<div class="phone_label">
+					Contacto
+				</div>
+				<a href="tel:+34695852145" class="phone_number">695852145</a>
+			</div>
+			<div class="icons_wrapper">
+				<a href="#" class="icon">
+					<i class="fab fa-facebook-f"></i>
+				</a>
+				<a href="#" class="icon">
+					<i class="fab fa-twitter"></i>
+				</a>
+				<a href="#" class="icon">
+					<i class="fab fa-instagram"></i>
+				</a>
+			</div>
+			<a href="mailto:vrtual.business@gmail.com" class="email_link">vrtual.business@gmail.com</a>
+		</div>
+		<div class="right_header">
+			<nav class="menu">
+				<a href="{{ url_for('home') }}" class="menu_item">
+					Inicio
+				</a>
+				<a href="{{ url_for('home') }}" class="menu_item">
+					Conócenos
+				</a>
+				<a href="{{ url_for('home') }}" class="menu_item">
+					Producto
+				</a>
+				<a href="{{ url_for('home') }}" class="menu_item">
+					Galería
+				</a>
+				<a href="{{ url_for('home') }}" class="menu_item">
+					Descarga
+				</a>
+			</nav>
+			<a href="{{ url_for('home') }}" class="logo">
+				<img src="{{ url_for('static', filename='img/logo.png') }}" alt="Logo">
+			</a>
+		</div>
+	</div>
+</header>
