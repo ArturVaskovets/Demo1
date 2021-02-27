@@ -5,16 +5,22 @@
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-	<script src="https://kit.fontawesome.com/228c1f352f.js" crossorigin="anonymous"></script>
-	<link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
 	<link rel="shortcut icon" href="{{ url_for('static', filename='img/favicon.ico') }}">
+	<link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
 	<title>VRtual</title>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+	<script src="https://kit.fontawesome.com/228c1f352f.js" crossorigin="anonymous"></script>
+	<script src="{{ url_for('static', filename='js/main.js') }}"></script>
 </head>
 
 <body>
 	{% include "sections/_header.html" %}
 	{% include "sections/_main_section.html" %}
-
+	{% include "sections/_about_us.html" %}
+	{% include "sections/_product.html" %}
+	{% include "sections/_gallery.html" %}
+	{% include "sections/_download.html" %}
+	{% include "sections/_footer.html" %}
 </body>
 
 </html>

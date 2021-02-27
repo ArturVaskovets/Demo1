@@ -13,14 +13,21 @@
 // Libre Baskerville + Merriweather
 
 
-@import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200;300;400;500;600;700&display=swap');
 
-$title-font: 'Lato', sans-serif;
-$text-font: 'Lato', sans-serif;
+$font_1: 'Lato', sans-serif;
+$font_2: 'Oswald', sans-serif;
+
+$bg_light: rgb(225, 235, 250);
+$bg_dark: rgb(89, 110, 138);
+
+* {
+	box-sizing: border-box;
+}
 
 body {
-	font-family: $text-font;
+	font-family: $font_1;
 	margin: 0;
 	padding: 0;
 }
