@@ -196,6 +196,66 @@ a {
   object-fit: contain;
 }
 
+.floating_menu {
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 0;
+  height: 100px;
+  z-index: 1001;
+  background-color: white;
+  box-shadow: 0px 10px 20px 0 rgba(0, 0, 0, 0.2);
+  -webkit-transform: translateY(-100%);
+  -ms-transform: translateY(-100%);
+  transform: translateY(-100%);
+  -webkit-transition: all 0.3s;
+  -o-transition: all 0.3s;
+  transition: all 0.3s;
+}
+.floating_menu.active {
+  -webkit-transform: none;
+  -ms-transform: none;
+  transform: none;
+}
+.floating_menu .menu {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  height: 100%;
+}
+.floating_menu .menu .menu_item {
+  display: inline-block;
+  position: relative;
+  font-weight: 300;
+  font-size: 22px;
+  letter-spacing: 0px;
+  line-height: 35px;
+  color: #333333;
+}
+.floating_menu .menu .menu_item::before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 0;
+  height: 2px;
+  background-color: #336699;
+  -webkit-transition: all 0.5s;
+  -o-transition: all 0.5s;
+  transition: all 0.5s;
+}
+.floating_menu .menu .menu_item:hover,
+.floating_menu .menu .menu_item.active {
+  color: #336699;
+}
+.floating_menu .menu .menu_item:hover::before,
+.floating_menu .menu .menu_item.active::before {
+  left: 0;
+  width: 100%;
+}
+
 .main_section {
   height: 100vh;
   position: relative;
@@ -306,7 +366,7 @@ section.common_section .section_inner .text_wrapper {
 }
 
 section.about_us {
-  padding: 250px 0 210px;
+  padding: 250px 0 200px;
 }
 section.about_us .section_inner .title {
   right: calc((100% - 1140px) / 2);

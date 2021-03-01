@@ -137,13 +137,62 @@
 	}
 }
 
+.floating_menu {
+	@include fill(X, fixed);
+	top: 0;
+	height: 100px;
+	z-index: 1001;
+	background-color: white;
+	box-shadow: 0px 10px 20px 0 rgba(black, 0.2);
+	@include transform(translateY(-100%));
+	@include transition(all 0.3s);
+
+	&.active {
+		@include transform(none)
+	}
+
+	.menu {
+		@include display_flex;
+		justify-content: space-around;
+		align-items: center;
+		height: 100%;
+
+		.menu_item {
+			display: inline-block;
+			position: relative;
+
+			font-weight: 300;
+			font-size: 22px;
+			letter-spacing: 0px;
+			line-height: 35px;
+			color: #333333;
+
+			&::before {
+				content: "";
+				position: absolute;
+				bottom: 0;
+				right: 0;
+				width: 0;
+				height: 2px;
+				background-color: $bg_dark;
+				@include transition(all 0.5s);
+			}
+		}
+
+		.menu_item:hover,
+		.menu_item.active {
+			color: $bg_dark;
+
+			&::before {
+				left: 0;
+				width: 100%;
+			}
+		}
+	}
+}
+
 .main_section {
 	height: 100vh;
-	//background-image: url('../img/mountains.png');
-	//background-position: center;
-	//background-repeat: no-repeat;
-	//background-size: cover;
-	//background-attachment: fixed;
 	position: relative;
 
 	&::before {
@@ -247,7 +296,7 @@ section.common_section {
 }
 
 section.about_us {
-	padding: 250px 0 210px;
+	padding: 250px 0 200px;
 	.section_inner {
 		.title {
 			right: calc((100% - 1140px) / 2);
