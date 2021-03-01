@@ -59,7 +59,7 @@
 				height: 35px;
 				background-color: white;
 				border-radius: 50%;
-				color: rgba(black, 0.5);
+				color: $bg_dark;
 				cursor: pointer;
 				@include transition(all 0.5s);
 
@@ -69,7 +69,7 @@
 				}
 
 				&:hover {
-					background-color: rgba(black, 0.5);
+					background-color: $bg_dark;
 					color: white;
 				}
 			}
@@ -198,9 +198,8 @@
 	}
 }
 
-.common_section {
+section.common_section {
 	@include display_flex;
-	height: 100vh;
 	align-items: center;
 	background-color: $bg_light;
 
@@ -208,6 +207,7 @@
 		@include display_flex;
 		justify-content: center;
 		align-items: center;
+		width: 100%;
 		padding: 50px calc((100% - 1140px) / 2);
 		position: relative;
 		background-color: $bg_dark;
@@ -237,7 +237,7 @@
 		.text_wrapper {
 			width: 50%;
 			font-weight: 400;
-			font-size: 34px;
+			font-size: 35px;
 			letter-spacing: 0.4px;
 			line-height: 40px;
 			color: white;
@@ -246,7 +246,8 @@
 	}
 }
 
-.about_us {
+section.about_us {
+	padding: 250px 0 210px;
 	.section_inner {
 		.title {
 			right: calc((100% - 1140px) / 2);
@@ -265,7 +266,8 @@
 	}
 }
 
-.product {
+section.product {
+	padding: 300px 0 250px;
 	.section_inner {
 		flex-direction: row-reverse;
 
@@ -278,11 +280,15 @@
 
 			.cell_phone {
 				position: absolute;
-				top: -180px;
-				left: 100px;
-				width: 400px;
-				height: 600px;
+				top: -155px;
+				left: 160px;
+				width: 270px;
+				height: 550px;
 				@include transform(rotate(20deg));
+
+				img {
+					object-fit: contain;
+				}
 			}
 		}
 
@@ -292,7 +298,8 @@
 	}
 }
 
-.gallery {
+section.gallery {
+	padding: 300px 0 265px;
 	.section_inner {
 		min-height: 325px;
 
@@ -309,21 +316,21 @@
 			}
 
 			.image:nth-of-type(1) {
-				width: 350px;
+				width: 400px;
 				height: 200px;
 				top: -215px;
 				left: 380px;
 			}
 
 			.image:nth-of-type(2) {
-				width: 430px;
+				width: 415px;
 				height: 225px;
 				top: 0;
 				left: 120px;
 			}
 
 			.image:nth-of-type(3) {
-				width: 325px;
+				width: 340px;
 				height: 185px;
 				top: 240px;
 				left: 0;
@@ -338,7 +345,8 @@
 	}
 }
 
-.download {
+section.download {
+	padding: 195px 0 290px;
 	.section_inner {
 		min-height: 400px;
 
@@ -432,7 +440,7 @@
 					height: 35px;
 					background-color: white;
 					border-radius: 50%;
-					color: rgba(black, 0.5);
+					color: $bg_dark;
 					cursor: pointer;
 					@include transition(all 0.5s);
 	

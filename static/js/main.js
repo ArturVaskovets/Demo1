@@ -12,17 +12,17 @@ $(document).ready(function(){
 });
 
 function animator () {
-	var elements = $(".common_section .section_inner");
+	var elements = $(".common_section");
 	var window_height = parseInt($(window).height());
-	var window_trigger = window_height / 2 + 300;
+	var window_trigger = window_height / 2 + 100;
 	var actual_position = parseInt($(window).scrollTop());
 
 	elements.each(function () {
 		var element_top = parseInt($(this).offset().top);
 		if ((actual_position + window_trigger) > element_top) {
-			$(this).removeClass("fadeOutUp").addClass("fadeInUp");
+			$(this).find(".section_inner").removeClass("fadeOutUp").addClass("fadeInUp");
 		} else {
-			$(this).removeClass("fadeInUp").addClass("fadeOutUp");
+			$(this).find(".section_inner").removeClass("fadeInUp").addClass("fadeOutUp");
 		}
 	});
 }
